@@ -1,4 +1,4 @@
-    .navbar-left {
+.navbar-left {
     margin-left: 20px;
   }
   
@@ -10,6 +10,7 @@
   
   .navbar-right li {
     margin-left: 20px;
+    font-size: 25px;
   }
   
   .navbar-right li:first-child {
@@ -26,32 +27,73 @@
   .navbar-right a:hover {
     color: #666;
   }
-  .data-container{
+  
+  .data-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
   }
-
+  
   .data-row {
     border-radius: 20px;
     background-color: #f0f0f0;
-    width: 80%;
+    width: 60%;
     height: 50px;
     padding: 10px;
     margin-top: 20px;
     cursor: pointer;
-    
+    font-size: 18px;
+    display: flex;
+    text-align: left;
+    align-items: center;
   }
-
+  
+  .data-row #test {
+    font-size: 18px;
+    margin-left: 20%;
+  }
+  
   .data-row:hover {
     background-color: #e0e0e0;
   }
-  .container-filter{
+  
+  .container-filter {
     justify-content: right;
-    display: FLEX;
+    display: flex;
     width: 100%;
     float: right;
     padding: 20px;
   }
+  
+  .buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  
+  .accept-button, .delete-button {
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .accept-button {
+    background-color: #4CAF50;
+  }
+  
+  .delete-button {
+    background-color: #f44336;
+  }
+  
+  .accept-button:hover, .delete-button:hover {
+    opacity: 0.8;
+  }
+  
