@@ -22,8 +22,10 @@ label {
 input[type="text"],
 input[type="password"] {
     margin-top: 3%;
-	width: 90%;
+	width: 100%;
     padding: 10px;
+    padding-left:10%;
+    padding-right: 10%;
 	margin-bottom: 10px;
 	border-radius: 3px;
 	border: none;
