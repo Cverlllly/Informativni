@@ -73,16 +73,33 @@ $row = $result->fetch_assoc();
         <input type="text" id="sola_id" name="sola_id" value="<?php echo $row['ime_obisk']; ?>" class="form-control"disabled='true'>
     </div>
   </form>
-
-
-
 </div>
+
+
+<?php if($row['sprejeta']==0){ ?>
 <div class="ad_form">
     <form action="" method="post" class="">
         <button id=ja>Sprejmi</button>
         <button id=ne>Zavrni</button>
     </form>
   </div>
+<?php } ?>
+<?php if($row['sprejeta']==1){ ?>
+<div class="ad_form">
+    <form action="" method="post" class="">
+        <button id=ja>Undo</button>
+    </form>
+  </div>
+<?php } ?>
+<?php if($row['sprejeta']==3){ ?>
+<div class="ad_form">
+    <form action="" method="post" class="">
+        <button id=ne>Deleted</button>
+    </form>
+  </div>
+<?php } ?>
+
+
 <script>
 function showDetails() {
   var details = document.getElementById("details");

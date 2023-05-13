@@ -60,7 +60,7 @@
   }
   .ad_form {
     position: fixed;
-    bottom: 10%;
+    bottom: 5%;
     right: 5%;
     z-index: 1000;
   }

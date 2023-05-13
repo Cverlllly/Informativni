@@ -126,10 +126,11 @@ $conn->close();
         </style>
     </head>
     <body>
-    <?php if(isset($error_message)) { ?>
-        <p><?php echo $error_message; ?></p>
-    <?php } ?>
+
     <div class="container">
+        <?php if(isset($error_message)) { ?>
+            <p class=test><?php echo $error_message; ?></p>
+        <?php } ?>
 		<form class="form" method="post" action="">
 			<label for="username">Username:</label>
 			<input type="text" id="username" name="username">

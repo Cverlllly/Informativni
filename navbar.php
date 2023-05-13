@@ -47,12 +47,12 @@ if(isset($_COOKIE['admin'])){
 <body>
 <nav class="navbar">
   <div class="navbar-left">
-    <a href="#"><img src="https://www.scv.si/wp-content/themes/yoo_master2_wp/images/scv.svg" alt="Logo" width="230" height="140"></a>
+    <a href="mainpage.php?filter=all"><img src="https://www.scv.si/wp-content/themes/yoo_master2_wp/images/scv.svg" alt="Logo" width="230" height="140"></a>
   </div>
   <div class="navbar-right">
     <ul>
       <li><a href="#">Koledar</a></li>
-      <li><a href="#">Termini</a></li>
+      <li><a href="mainpage.php?filter=all">Termini</a></li>
       <li><a href="logout.php">Logout</a></li>
     </ul>
   </div>

@@ -73,7 +73,7 @@
     width: 100%;
   }
   
-  .accept-button, .delete-button {
+  .accept-button, .delete-button,.undo-button,.deleted-button {
     margin-left: 10px;
     padding: 10px;
     border-radius: 5px;
@@ -85,15 +85,15 @@
     transition: all 0.3s ease;
   }
   
-  .accept-button {
+  .accept-button, .undo-button{
     background-color: #4CAF50;
   }
   
-  .delete-button {
+  .delete-button, .deleted-button {
     background-color: #f44336;
   }
   
-  .accept-button:hover, .delete-button:hover {
+  .accept-button:hover, .delete-button:hover,.undo-button:hover,.deleted-button:hover {
     opacity: 0.8;
   }
   
