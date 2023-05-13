@@ -17,15 +17,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $conn->real_escape_string($_POST['password']);
 
     // Query the database for the user
-    $sql = "SELECT a.admin_id,a.username,ime FROM admini a INNER JOIN sole s on a.sola_id=s.sola_id WHERE username = '$username' AND passwrod = '$password'";
+    $sql = "SELECT a.admin_id,a.username,ime_obisk FROM admini a INNER JOIN sole s on a.sola_id=s.sola_id WHERE username = '$username' AND passwrod = '$password'";
     $result = $conn->query($sql);
 
     if ($result->num_rows == 1) {
         // Log the user in and redirect to the home page
         $row = $result->fetch_assoc();
-        if($row['ime']==$sola){
+        if($row['ime_obisk']==$sola){
             $_SESSION['admin_id'] = $row['admin_id'];
-            setcookie('admin', json_encode(array('admin_id' => $row['admin_id'], 'username' => $row['username'],'ime'=>$row['ime'])), time() + (86400 * 30), '/');
+            setcookie('admin', json_encode(array('admin_id' => $row['admin_id'], 'username' => $row['username'],'ime'=>$row['ime_obisk'])), time() + (86400 * 30), '/');
             header('Location: mainpage.php');
             exit;
         }else{

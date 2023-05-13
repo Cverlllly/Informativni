@@ -17,6 +17,7 @@ if(isset($_COOKIE['admin'])){
             justify-content: space-between;
             align-items: center;
             height: 100px;
+            position: sticky;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             background-color:  <?php $admin = json_decode($_COOKIE['admin'], true);
                 $id = $admin['ime'];
@@ -46,7 +47,7 @@ if(isset($_COOKIE['admin'])){
 <body>
 <nav class="navbar">
   <div class="navbar-left">
-    <a href="#"><img src="https://www.scv.si/wp-content/themes/yoo_master2_wp/images/scv.svg" alt="Logo" width="235" height="140"></a>
+    <a href="#"><img src="https://www.scv.si/wp-content/themes/yoo_master2_wp/images/scv.svg" alt="Logo" width="230" height="140"></a>
   </div>
   <div class="navbar-right">
     <ul>

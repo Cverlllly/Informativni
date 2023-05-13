@@ -1,3 +1,4 @@
+
 <?php
 include 'navbar.php';
 $_COOKIE['admin'];
@@ -23,12 +24,12 @@ if ($id == 'vse') {
     $sql = "SELECT * FROM prijava p 
             INNER JOIN sole s ON p.sola_id = s.sola_id 
             INNER JOIN kontaktni_podatki k ON p.kontakt_id = k.kontakt_id 
-            WHERE p.sprejeta = '$filter' AND s.ime='$id'";
+            WHERE p.sprejeta = '$filter' AND ime_obisk='$id'";
   } else {
     $sql = "SELECT * FROM prijava p 
             INNER JOIN sole s ON p.sola_id = s.sola_id 
             INNER JOIN kontaktni_podatki k ON p.kontakt_id = k.kontakt_id 
-            WHERE s.ime='$id'";
+            WHERE ime_obisk='$id'";
   }
 }
 
@@ -40,7 +41,7 @@ $result = $conn->query($sql);
   <form action="" method="get">
     <label for="filter">Filter by Done:</label>
     <select id="filter" name="filter">
-      <option value="">All</option>
+      <option value=''>All</option>
       <option value="1">Complete</option>
       <option value="0">In progress</option>
     </select>

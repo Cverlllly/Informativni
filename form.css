@@ -58,3 +58,30 @@
     font-size: 20px;
     margin-bottom: 10px;
   }
+  .ad_form {
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    z-index: 1000;
+  }
+  .ad_form button {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 5px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+  }
+  
+  .ad_form button#ne {
+    background-color: #f44336;
+  }
+  
+  .ad_form button:hover {
+    opacity: 0.8;
+  }
