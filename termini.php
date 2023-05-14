@@ -15,10 +15,8 @@
       var calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
         dateClick: function(info) {
-          // Get the selected date
           var selectedDate = moment(info.date).format('YYYY-MM-DD');
 
-          // Send an AJAX request to insert the selected date into the "termini" table
           var xhr = new XMLHttpRequest();
           xhr.open('POST', 'ter.php');
           xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
