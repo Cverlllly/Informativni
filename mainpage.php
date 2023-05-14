@@ -4,8 +4,6 @@ include 'navbar.php';
 $_COOKIE['admin'];
 $admin = json_decode($_COOKIE['admin'], true);
 $id = $admin['ime'];
-
-// Check if the filter is submitted
 if ($id == 'vse') {
   if (($_GET['filter'])!='all') {
     $filter = $_GET['filter'];
@@ -36,7 +34,7 @@ if ($id == 'vse') {
   else if($_GET['filter']=='all'){
     $sql = "SELECT * FROM prijava p 
             INNER JOIN sole s ON p.sola_id = s.sola_id 
-            INNER JOIN kontaktni_podatki k ON p.kontakt_id = k.kontakt_id";
+            INNER JOIN kontaktni_podatki k ON p.kontakt_id = k.kontakt_id WHERE ime_obisk='$id'";
   } 
   else {
     $sql = "SELECT * FROM prijava p 

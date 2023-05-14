@@ -5,7 +5,7 @@
 
 include 'navbar.php';
 $id = $_GET['id'];
-$sql = "SELECT * FROM prijava p inner join sole s on p.sola_id=s.sola_id inner join kontaktni_podatki k on p.kontakt_id= k.kontakt_id WHERE p.prijava_id=$id";
+$sql = "SELECT * FROM prijava p inner join sole s on p.sola_id=s.sola_id inner join kontaktni_podatki k on p.kontakt_id= k.kontakt_id inner join termini t on t.termini_id=p.termin_id WHERE p.prijava_id=$id";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 ?>
@@ -33,8 +33,8 @@ $row = $result->fetch_assoc();
       <input type="text" id="nacin_izvedbe" name="nacin_izvedbe" value="<?php echo $row['nacin_izvedbe']; ?>" class="form-control" disabled='true'>
     </div>
     <div class="form-group">
-      <label for="datum_obiska">Datum obiska:</label>
-      <input type="text" id="datum_obiska" name="datum_obiska" value="<?php echo $row['datum_obiska']; ?>" class="form-control" disabled='true'>
+      <label for="datum">Datum obiska:</label>
+      <input type="text" id="datum" name="datum" value="<?php echo $row['datum']; ?>" class="form-control" disabled='true'>
     </div>
     <div class="form-group">
       <label for="urnik_obiska">Urnik obiska:</label>

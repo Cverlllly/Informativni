@@ -1,4 +1,6 @@
-<?php require_once 'navbar.php'; ?>
+<?php require_once 'navbar.php';
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,11 +26,12 @@ $(document).ready(function() {
                     console.log(response);
                     $('#data-container').empty();
                     $.each(response, function(key, value) {
-                        $('#data-container').append("<p>Ime šole: " + value.ime_sole + "</p>");
-                        $('#data-container').append("<p>Datum obiska: " + value.datum_obiska + "</p>");
-                        $('#data-container').append("<p>Št učencev: " + value.st_ucencev + "</p>");
-                        $('#data-container').append("<p>Sredstva: " + value.sredstva + "</p>");
-                        $('#data-container').append("<p>Urnik obiska: " + value.urnik_obiska + "</p>");
+                        $('#data-container').append("<p><b>Ime šole:</b><br>" + value.ime_sole + "</p><br> ");
+                        $('#data-container').append("<p><b>Datum obiska:</b><br> " + value.datum_obiska + "</p><br>");
+                        $('#data-container').append("<p><b>Št učencev:</b> <br>" + value.st_ucencev + "</p><br>");
+                        $('#data-container').append("<p><b>Sredstva:</b> <br>" + value.sredstva + "</p><br>");
+                        $('#data-container').append("<p><b>Urnik obiska:</b> <br>" + value.urnik_obiska + "</p><br>");
+                        $('#data-container').append("<p><b>Obisk šole:</b> <br>" + value.ime_obisk + "</p>");
                     });
                 },
                 error: function(xhr, status, error) {
@@ -37,18 +40,31 @@ $(document).ready(function() {
                 }
                 
             });
+            
+        },
+        eventAfterRender: function(event, element, view) {
+            var eventDate = moment(event.start).format('YYYY-MM-DD');
+            var cell = $('td[data-date="' + eventDate + '"]');
+            cell.addClass('has-events');
         }
     });
 });
     </script>
+    <style>
+        .has-events {
+            background-color: #e8f1fe;
+        }
+    </style>
 </head>
 <body>
+<div class="test">
 <div class="container">
     <div class="calendar-container">
-        <div id="calendar"></div>
-    </div>
-    <div class="data-container">
-        <div id="data-container"></div>
+            <div id="calendar"></div>
+        </div>
+        <div class="data-container">
+            <div id="data-container"></div>
+        </div>
     </div>
 </div>
 </body>
