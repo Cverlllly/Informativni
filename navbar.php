@@ -3,7 +3,8 @@ if(isset($_COOKIE['admin'])){
     $admin = json_decode($_COOKIE['admin'], true);
     $username = $admin['username'];
 } else {
-    header('Location: login.php');
+    
+    header('Location: logout.php');
     exit();
 };?>
 <!DOCTYPE html>

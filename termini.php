@@ -10,39 +10,46 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js'></script>
     <script>
-        $(document).ready(function() {
-            // Retrieve the events from the PHP script
+$(document).ready(function() {
+    // Initialize the calendar
+    $('#calendar').fullCalendar({
+        events: 'get_events.php',
+        dayClick: function(date, jsEvent, view) {
             $.ajax({
-                url: 'get_events.php',
-                dataType: 'json',
-                success: function(events) {
-                    // Check that the events array is valid
-                    if (!Array.isArray(events)) {
-                        console.error('Invalid events array:', events);
-                        return;
-                    }
-                    for (var i = 0; i < events.length; i++) {
-                        var event = events[i];
-                        if (!event.id || !event.title || !event.start || !event.end) {
-                            console.error('Invalid event object:', event);
-                            return;
-                        }
-                    }
-                    // Initialize the calendar
-                    $('#calendar').fullCalendar({
-                        events: events
+                url: 'get_data.php',
+                data: {
+                    date: date.format()
+                },
+                success: function(response) {
+                    console.log(response);
+                    $('#data-container').empty();
+                    $.each(response, function(key, value) {
+                        $('#data-container').append("<p>Ime šole: " + value.ime_sole + "</p>");
+                        $('#data-container').append("<p>Datum obiska: " + value.datum_obiska + "</p>");
+                        $('#data-container').append("<p>Št učencev: " + value.st_ucencev + "</p>");
+                        $('#data-container').append("<p>Sredstva: " + value.sredstva + "</p>");
+                        $('#data-container').append("<p>Urnik obiska: " + value.urnik_obiska + "</p>");
                     });
                 },
                 error: function(xhr, status, error) {
-                    console.error('Error retrieving events:', error);
+                    console.error('Error retrieving data:', error);
+                    console.log(date.format());
                 }
+                
             });
-        });
+        }
+    });
+});
     </script>
 </head>
 <body>
-    <div class="container">
-        <div id='calendar'></div>
+<div class="container">
+    <div class="calendar-container">
+        <div id="calendar"></div>
     </div>
+    <div class="data-container">
+        <div id="data-container"></div>
+    </div>
+</div>
 </body>
 </html>

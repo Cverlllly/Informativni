@@ -1,6 +1,7 @@
 <?php require_once 'header.php';
 
 // Retrieve the events from the database
+
 $result = $conn->query("SELECT * FROM prijava");
 
 // Format the events as JSON
