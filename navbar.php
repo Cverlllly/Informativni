@@ -56,8 +56,8 @@ if(isset($_COOKIE['admin'])){
   </div>
   <div class="navbar-right">
     <ul>
-      <li><a href="termini.php">Koledar</a></li>
-      <li><a href="mainpage.php?filter=all">Termini</a></li>
+      <li><a href="koledar.php">Koledar</a></li>
+      <li><a href="termini.php">Termini</a></li>
       <li><a href="logout.php">Logout</a></li>
     </ul>
   </div>

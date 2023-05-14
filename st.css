@@ -1,0 +1,7 @@
+#calendar {
+    margin-top: 20px;
+    height: 800px;
+  }
+  .fc-daygrid-event, .fc-daygrid-dot-event, .fc-daygrid-day-number {
+    font-size: 16px;
+  }
