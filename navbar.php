@@ -16,6 +16,7 @@ if(isset($_COOKIE['admin'])){
             display: flex;
             justify-content: space-between;
             align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
             height: 100px;
             position: sticky;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -51,7 +52,7 @@ if(isset($_COOKIE['admin'])){
   </div>
   <div class="navbar-right">
     <ul>
-      <li><a href="#">Koledar</a></li>
+      <li><a href="termini.php">Koledar</a></li>
       <li><a href="mainpage.php?filter=all">Termini</a></li>
       <li><a href="logout.php">Logout</a></li>
     </ul>

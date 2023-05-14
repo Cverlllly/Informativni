@@ -1,3 +1,6 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
 .navbar-left {
     margin-left: 20px;
   }
@@ -96,4 +99,3 @@
   .accept-button:hover, .delete-button:hover,.undo-button:hover,.deleted-button:hover {
     opacity: 0.8;
   }
-  

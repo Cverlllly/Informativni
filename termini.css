@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+  }
+  
+  #calendar {
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 20px;
+    width: 55%;
+  }
