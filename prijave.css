@@ -1,0 +1,115 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+.box {
+  width: 150px;
+  height: 150px;
+  margin: 40px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.box:hover {
+  width: 170px;
+  height: 170px;
+  transition: 0.3s;
+  margin: 30px;
+}
+.bg {
+  background-color: #f5f5f5;
+  margin: 0px;
+}
+
+.big_text {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.medium_text {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.nav {
+  width: 100%;
+}
+
+.main-header {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(236, 17, 100);
+  background-blend-mode: multiply;
+  background-size: cover;
+}
+
+.butten {
+  border-radius: 10px;
+  font-size: 30px;
+  font-weight: 300;
+  background-color: rgba(236, 17, 100);
+  color: #ffff;
+  border: rgba(215, 20, 90);
+}
+.butten:hover {
+  background-color: rgba(215, 20, 90);
+  color: #dddbdb;
+  border: rgba(236, 17, 100);
+  cursor: pointer;
+}
+.input-group {
+  display: none;
+  margin-bottom: 20px;
+}
+.input-group.active {
+  display: block;
+}
+
+.prasanje {
+  padding: 5px;
+  background-color: #dddbdb;
+  border-radius: 10px;
+  margin-top: 10px;
+  min-width: 500px;
+  max-width: 1000px;
+  min-height: 50px;
+  max-height: 500px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 20px;
+}
+
+.radiolayout {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 156px;
+}
+.radiolayout input {
+  height: 30px;
+  margin-top: 0;
+  margin-left: 20px;
+}
+.radiolayout label {
+  height: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+.radiolayout input[type="text"] {
+  height: 20px;
+  width: 279px;
+}
