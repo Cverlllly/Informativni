@@ -1,4 +1,7 @@
 <?php include 'header.php';
+ini_set('display_errors', 'Off');
+
+
 if(isset($_COOKIE['admin'])){
     $admin = json_decode($_COOKIE['admin'], true);
     $username = $admin['username'];
