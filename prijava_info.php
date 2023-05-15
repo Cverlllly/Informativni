@@ -85,7 +85,7 @@
     <div class="container">
         <h1>Your Application</h1>
 
-        <form method="post" action="process.php">
+        <form method="post" action="obdelava_prijave.php">
             <div class="input-group active">
                 <div class="prasanje">
                     <label>Ime osnovne šole:</label>
@@ -108,10 +108,6 @@
                         <input type="text" id="drugace" name="drugacetext" style="visibility:hidden;">
                     </div>
                 </div>
-
-
-
-
                 <div class="prasanje">
                     <label>Izberite datum obiska:</label>
                     <input type="text" name="field3" id="selectedDateInput">
@@ -137,53 +133,85 @@
                         enable: allowedDates
                     });
                 </script>
-                <style>
-                    input[type="date"]::-webkit-calendar-picker-indicator {
-                        filter: invert(25%) sepia(80%) saturate(10000%) hue-rotate(90deg);
-                    }
-                </style>
 
                 <div class="prasanje">
-                    <label>Ime osnovne šole:</label>
+                    <label>Želen urnik obiska: <br> (pričetek, malica, zaključek) </label>
                     <input type="text" name="field4">
                 </div>
             </div>
 
             <div class="input-group">
                 <div class="prasanje">
-                    <label>Ime osnovne šole:</label>
-                    <input type="text" name="field5">
+                    <label>Katero šolo boste obiskali:</label>
+                    <div class="radiolayout">
+                        <input type="radio" name="field5" value="1">
+                        <input type="radio" name="field5" value="2">
+                        <input type="radio" name="field5" value="3">
+                        <input type="radio" name="field5" value="4">
+                        <input type="radio" name="field5" value="5">
+                    </div>
+
+                    <div class="radiolayout">
+                        <label>Gimnazija</label>
+                        <label>Elektro računalniška šola</label>
+                        <label>Šola za storitvene dejavnosti</label>
+                        <label>Šola za strojništvo, geotehniko in okolje</label>
+                        <label>Vse</label>
+                    </div>
+                </div>
+
+                <div class="prasanje">
+                    <label>Starostna skupina otrok:</label>
+                    <div class="radiolayout">
+                        <input type="radio" name="field6" value="7 razred">
+                        <input type="radio" name="field6" value="8 razred">
+                        <input type="radio" name="field6" value="9 razred">
+                    </div>
+
+                    <div class="radiolayout">
+                        <label>7. razred</label>
+                        <label>8. razred</label>
+                        <label>9. razred</label>
+                    </div>
                 </div>
                 <div class="prasanje">
-                    <label>Ime osnovne šole:</label>
-                    <input type="text" name="field6">
-                </div>
-                <div class="prasanje">
-                    <label>Ime osnovne šole:</label>
+                    <label>Telefonska številka kontaktne osebe:</label>
                     <input type="text" name="field7">
                 </div>
                 <div class="prasanje">
-                    <label>Ime osnovne šole:</label>
+                    <label>E-naslov kontaktne osebe:</label>
                     <input type="text" name="field8">
                 </div>
             </div>
 
             <div class="input-group">
                 <div class="prasanje">
-                    <label>Ime osnovne šole:</label>
+                    <label>Število učencev:</label>
                     <input type="text" name="field9">
                 </div>
                 <div class="prasanje">
-                    <label>Ime osnovne šole:</label>
+                    <label>Pričakovanja:</label>
                     <input type="text" name="field10">
                 </div>
                 <div class="prasanje">
-                    <label>Ime osnovne šole:</label>
+                    <label>Nam kaj želite sporočiti:</label>
                     <input type="text" name="field11">
                 </div>
                 <div class="prasanje">
-                    <label>Ime osnovne šole:</label>
-                    <input type="text" name="field12">
+                    <label>Sredstva na vasi soli:</label>
+                    <div class="radiolayout">
+                        <input type="checkbox" name="field12" value="Racunalnik">
+                        <input type="checkbox" name="field13" value="Projektor">
+                        <input type="checkbox" name="field14" value="Zvocniki">
+                        <input type="checkbox" name="field15" value="Skupine so locene po razredih">
+                    </div>
+
+                    <div class="radiolayout">
+                        <label>Racunalnik</label>
+                        <label>Projektor</label>
+                        <label>Zvocniki</label>
+                        <label>Skupine so locene po razredih</label>
+                    </div>
                 </div>
             </div>
             <div class="button-group">
