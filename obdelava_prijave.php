@@ -35,18 +35,23 @@ $sql2 = "INSERT INTO prijava(termin_id, ime_sole, nacin_izvedbe, urnik_obiska, s
         VALUES((SELECT termini_id FROM termini WHERE datum = '$datum_obiska'), '$ime_os_sole', '$delavnice', '$urnik', 
         '$starostna_skupina', $st_ucencev, '$pricakovanja', '$sredstva', '$sporocilo', '" . date('Y-m-d H:i:s') . "', 
         (SELECT kontakt_id FROM kontaktni_podatki WHERE email = '$email' AND telefonska = '$telefonska' LIMIT 1), $sola_obiska);";
-
+$sql3 = "UPDATE termini SET prosto = 0 WHERE datum = '$datum_obiska'";
 
 if ($conn->query($sql1) === TRUE) {
-    echo "New record created successfully";
+    echo "Kontakt ustvarjen!<br>";
 } else {
     echo "Error: " . $sql1 . "<br>" . $conn->error;
 }
 
 if ($conn->query($sql2) === TRUE) {
-    echo "New record created successfully";
+    echo "Prijava uspesno ustvarjena!<br>";
 } else {
     echo "Error: " . $sql2 . "<br>" . $conn->error;
+}
+if ($conn->query($sql3) === TRUE) {
+    echo "Datum spremenjen!";
+} else {
+    echo "Error: " . $sql3 . "<br>" . $conn->error;
 }
 
 $conn->close();
