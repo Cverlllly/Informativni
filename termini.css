@@ -32,7 +32,7 @@
   
   .data-container p {
     margin-bottom: 10px;
-    font-size: 23px;
+    font-size: 20px;
   }
   
   .data-container p:last-of-type {
@@ -43,6 +43,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 85vh;
+    height: 40%;
   }
   

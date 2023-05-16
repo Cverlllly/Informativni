@@ -7,7 +7,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.7/index.global.min.js" integrity="sha512-ImaVFNPyY+SQqhqxDOvh1woqWerGOjHQwCbbMa/U06wxb2Yq+nCpxJraA1Iv9MQiqBzN+e3w8CwI/l71mjMIJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
+<div class='container'>
   <div id="calendar"></div>
+  <div class="legenda">S klikom na datum dodate nov prosti termin<br>
+  s ponovnim kilkom na prost datum ga izbrišete
+ </div>
+</div>
+
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -56,5 +62,6 @@
       calendar.render();
     });
   </script>
+
 </body>
 </html>
