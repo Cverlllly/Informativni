@@ -24,6 +24,9 @@
             if (document.getElementById('delavnicedrugacecheck').checked) {
                 document.getElementById('drugace').style.visibility = 'visible';
             } else document.getElementById('drugace').style.visibility = 'hidden';
+            if (document.getElementById('delavnicesolacheck').checked) {
+                document.getElementById('sredstvanasoli').style.visibility = 'hidden';
+            } else document.getElementById('sredstvanasoli').style.visibility = 'visible';
 
         }
 
@@ -94,7 +97,7 @@
                 <div class="prasanje">
                     <label>Kako želite izvesti delavnice na ŠC Velenje:</label>
                     <div class="radiolayout">
-                        <input type="radio" name="field2" value="Delavnice bi izvedli na ŠC Velenje" onClick="drugaceCheck()" required>
+                        <input type="radio" id="delavnicesolacheck" name="field2" value="Delavnice bi izvedli na ŠC Velenje" onClick="drugaceCheck()" required>
                         <input type="radio" name="field2" value="Delavnice bi izvedli na naši šoli" onClick="drugaceCheck()" required>
                         <input type="radio" name="field2" value="Roditeljski sestanek na OŠ" onClick="drugaceCheck()" required>
                         <input type="radio" id="delavnicedrugacecheck" name="field2" value="Drugace" onClick="drugaceCheck()" required>
@@ -197,7 +200,7 @@
                     <label>Nam kaj želite sporočiti:</label>
                     <input type="text" name="field11" required>
                 </div>
-                <div class="prasanje">
+                <div class="prasanje" id="sredstvanasoli" style="visibility:hidden;">
                     <label>Sredstva na vasi soli:</label>
                     <div class="radiolayout">
                         <input type="checkbox" name="field12" value="Racunalnik">

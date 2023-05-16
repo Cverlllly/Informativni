@@ -58,6 +58,8 @@
   background-color: rgba(236, 17, 100);
   color: #ffff;
   border: rgba(215, 20, 90);
+  width: 100px;
+  height: 40px;
 }
 .butten:hover {
   background-color: rgba(215, 20, 90);
